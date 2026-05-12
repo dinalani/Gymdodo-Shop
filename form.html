@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gymdodo - Startseite</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Kopfbereich mit Hamburger Menü -->
+    <header>
+        <a href="index.html" class="header-logo">
+            <img src="img/logo.png" alt="Dodo Logo">
+            <div class="header-text">
+                <h1>Gymdodo</h1>
+            </div>
+        </a>
+
+        <!-- Hamburger Schalter -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <!-- Navigationsleiste -->
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="form.html">Termin vereinbaren</a></li>
+                <li><a href="#">Impressum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Termin vereinbaren</h2>
+        <form method="post" action="" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="vorname">Vorname</label><br>
+                <input type="text" id="vorname" name="vorname">
+            </div>
+
+            <div class="form-group">
+                <label for="nachname">Nachname</label><br>
+                <input type="text" id="nachname" name="nachname">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email*</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefon">Telefonnummer</label><br>
+                <input type="tel" id="telefon" name="telefon">
+            </div>
+
+            <div class="form-group">
+                <label for="geburtsdatum">Geburtsdatum</label><br>
+                <input type="date" id="geburtsdatum" name="geburtsdatum">
+            </div>
+
+            <fieldset class="form-group">
+                <div class="Ziel-text">
+                    <legend>Dein Ziel</legend>
+                </div>
+                <div class="form-check-muskel">
+
+                    <input type="checkbox" id="muskelaufbau" name="ziel" value="muskelaufbau" checked>
+                    <label for="muskelaufbau">Muskelaufbau</label>
+                </div>
+
+                <div class="form-check-abnehmen">
+
+                    <input type="checkbox" id="abnehmen" name="ziel" value="abnehmen">
+                    <label for="abnehmen">Abnehmen</label>
+                </div>
+
+
+                <div class="form-check-ausdauer">
+
+                    <input type="checkbox" id="ausdauer" name="ziel" value="ausdauer">
+                    <label for="ausdauer">Ausdauer</label>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="nachricht">Nachricht / Bemerkungen</label><br>
+                <textarea id="nachricht" name="nachricht" rows="4" cols="50"
+                    placeholder="Deine Nachricht an uns..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Termin anfragen</button>
+                <button type="reset">Eingaben löschen</button>
+            </div>
+
+        </form>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Gymdodo<br>
+            Alle Rechte vorbehalten.<br>
+            Öffnungszeiten, Kontaktmöglichkeiten und rechtliche Hinweise folgen im weiteren Ausbau der Seite</p>
+    </footer>
+</body>
+
+</html>

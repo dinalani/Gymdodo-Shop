@@ -1,0 +1,436 @@
+:root {
+  --color-blue: #2476ba;
+}
+
+html {
+  background-color: #f0f2f5;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  border-bottom: 2px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  /* Logo links, Hamburger rechts */
+  align-items: center;
+  flex-wrap: wrap;
+  /* Erlaubt dem Menü, in die nächste Zeile zu springen */
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  /* Link-Strich entfernen */
+}
+
+.header-logo img {
+  max-width: 80px;
+  height: auto;
+}
+
+h1 {
+  color: var(--color-blue);
+  margin: 0;
+}
+
+/* Hamburger & Checkbox Trick */
+.menu-toggle {
+  display: none;
+  /* Checkbox immer verstecken */
+}
+
+
+.hamburger {
+  font-size: 32px;
+  cursor: pointer;
+  /* Auf Handy anzeigen */
+  color: #2c3e50;
+}
+
+
+nav.nav-links {
+  width: 100%;
+  display: none;
+  /* Menü standardmäßig verstecken */
+  background-color: #2c3e50;
+  text-align: center;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  /* Untereinander auf Mobile */
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #ff9253;
+}
+
+/* Menü aufklappen, wenn Checkbox aktiv ist */
+.menu-toggle:checked~nav.nav-links {
+  display: block;
+}
+
+/* --- HAUPTBEREICH --- */
+main {
+  padding: 40px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  /* Mobile: Alles untereinander */
+  padding: 30px 20px;
+  background-color: #2c3e50;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+/* Buttons */
+.hero-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hero-btns a:hover {
+  background-color: #ff9253;
+  transition: 0.3s;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #2c3e50;
+}
+
+.btn-secondary {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+/* Bild Styling */
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Desktop-Anpassung (ab 768px Breite) */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    /* Desktop: Nebeneinander */
+    justify-content: space-between;
+    padding: 80px 10%;
+    text-align: left;
+  }
+
+  .hero-content {
+    text-align: left;
+    flex: 1;
+  }
+
+  .hero-btns {
+    flex-direction: row;
+  }
+
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/* Shop-Card */
+.article-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Mobile: 1 Spalte */
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.shop-card {
+  background-color: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-media img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.shop-body {
+  flex-grow: 1;
+}
+
+.shop-tag {
+  color: #e74c3c;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.shop-labels span {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin: 5px;
+  font-size: 0.9em;
+}
+
+.shop-link {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #2c3e50;
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+/* Produkte */
+.produkt-galerie {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.produkt-item {
+  display: inline-block;
+}
+
+.news {
+  display: flex;
+  justify-content: center;
+}
+
+.Angebote-text {
+  text-align: center;
+}
+
+/* Formular */
+form {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+
+input[type="date"] {
+  /* Verhindert das typische kleine Design auf iOS/Android */
+  appearance: none;
+  -webkit-appearance: none;
+
+  /* Breite und Höhe für komfortables Tippen */
+  width: 100%;
+  min-height: 48px;
+  /* Goldstandard für Touch-Elemente */
+  padding: 10px;
+
+  /* Schriftgröße (mind. 16px, um Auto-Zoom auf dem iPhone zu verhindern) */
+  font-size: 16px;
+
+  /* Design-Anpassung an dein Gymdodo-Branding */
+  border: 1px solid #c3c3c3;
+  border-radius: 8px;
+  background-color: #fff;
+  box-sizing: border-box;
+  /* Wichtig, damit Padding die Breite nicht sprengt */
+}
+
+/* Icon für den Kalender vergrößern (Chrome/Edge) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.Ziel-text {
+  font-weight: bold;
+  gap: 20px;
+  padding-bottom: 20px;
+
+}
+
+.form-check-muskel {
+  display: flex;
+  gap: 20px;
+  padding: 5px;
+  padding-bottom: 15px;
+}
+
+.form-check-abnehmen {
+  display: flex;
+  gap: 20px;
+  padding: 5px;
+  padding-bottom: 15px;
+}
+
+.form-check-ausdauer {
+  display: flex;
+  gap: 20px;
+  padding: 5px;
+  padding-bottom: 15px;
+}
+
+input[type="checkbox"] {
+  /* Vergrößert die Checkbox auf das 1.5-fache */
+  transform: scale(1.5);
+  /* Abstand halten, damit sie nicht am Label klebt */
+  margin-right: 10px;
+  /* Wichtig für Mobile: Ausreichend Klickfläche drumherum */
+  cursor: pointer;
+}
+
+.form-check-muskel label,
+.form-check-abnehmen label,
+.form-check-ausdauer label {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #f35b4a;
+}
+
+footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-size: 0.9em;
+  border-top: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+
+  /* Burger verstecken */
+  .hamburger {
+    display: none;
+  }
+
+  /* Menü dauerhaft zeigen */
+  nav.nav-links {
+    display: block !important;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  nav a {
+    color: #2c3e50;
+  }
+
+  /* Artikel mehrspaltig machen */
+  .article-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
