@@ -2,7 +2,7 @@
 //Mindestalter
 const MIN_AGE = 18;
 
-//Funktion checkAge
+//Eingabe Age größer/gleich MinAge
 function checkAge(age) {
     if (age >= MIN_AGE) {
         return true;
