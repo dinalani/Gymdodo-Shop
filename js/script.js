@@ -1,10 +1,10 @@
 "use strict";
 //Mindestalter
-const MIN_AGE = 18;
+const MINAGE = 18;
 
 //Eingabe Age größer/gleich MinAge
 function checkAge(age) {
-    if (age >= MIN_AGE) {
+    if (age >= MINAGE) {
         return true;
     } else {
         return false;
@@ -22,4 +22,4 @@ function showProducts(userAge) {
 }
 
 // Funktionsaufruf
-showProducts(17);
+showProducts(18);
