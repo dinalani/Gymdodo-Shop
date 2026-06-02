@@ -104,74 +104,134 @@ nav a:hover {
 /* =========================================
    3. HAUPTBEREICH & HERO
    ========================================= */
+/* =========================================
+   3. HAUPTBEREICH & HERO (MOBILE FIRST)
+   ========================================= */
 main {
-  padding: 40px;
+  padding: 20px;
+  /* Auf Mobile etwas kompakter */
 }
 
 .hero {
   display: flex;
   flex-direction: column;
-  padding: 30px 20px;
-  background-color: #2c3e50;
+  /* Ein dunkler, atmosphärischer Verlauf, der die Farben des Bildes aufgreift */
+  background: linear-gradient(135deg, #111a24 0%, #2476ba 100%);
+  padding: 40px 20px;
   align-items: center;
-  gap: 30px;
-  margin-bottom: 30px;
-  border-radius: 15px;
+  gap: 35px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 
 .hero-content {
   text-align: center;
+  color: #ffffff;
+}
+
+/* Kleiner moderner Vorab-Text */
+.hero-badge {
+  display: inline-block;
+  background-color: rgba(36, 118, 186, 0.2);
+  color: #52a5ec;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
 .hero-content h1 {
   font-size: 2.2rem;
   color: #ffffff;
   margin-bottom: 15px;
-  line-height: 1.2;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+/* Highlight-Farbe für "Legende!" */
+.highlight-text {
+  color: #ff9253;
+  /* Knackiges Orange als Kontrast zum düsteren Blau */
+  text-shadow: 0 0 15px rgba(255, 146, 83, 0.3);
 }
 
 .hero-content p {
-  font-size: 1.1rem;
-  color: #ffffff;
-  margin-bottom: 25px;
+  font-size: 1.05rem;
+  color: #cdffff;
+  /* Leicht bläuliches, helles Weiß für besseren Kontrast */
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.9;
 }
 
+/* Buttons */
 .hero-btns {
   display: flex;
   flex-direction: column;
   gap: 15px;
-}
-
-.hero-btns a:hover {
-  background-color: #ff9253;
-  transition: 0.3s;
+  width: 100%;
 }
 
 .btn-primary,
 .btn-secondary {
   padding: 15px 30px;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
   text-align: center;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
-  background-color: #ffffff;
-  color: #2c3e50;
+  background-color: #ff9253;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(255, 146, 83, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: #e07b42;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 146, 83, 0.6);
 }
 
 .btn-secondary {
-  border: 2px solid #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
   color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Bild-Container */
+.hero-image {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-image img {
   width: 100%;
-  max-width: 500px;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  /* Subtiler Schatten, der das Bild im dunklen Raum plastisch wirken lässt */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Cooler interaktiver Effekt: Wenn man über das Bild hovert, schwebt die Münze leicht nach oben */
+.hero-image:hover img {
+  transform: translateY(-10px) scale(1.02);
 }
 
 /* 4. shop layout & Seitenleiste*/
@@ -262,7 +322,7 @@ main {
 }
 
 .shop-tag {
-  color: #e74c3c;
+  color:#ff9253;
   font-weight: bold;
   font-size: larger;
   text-transform: uppercase;
@@ -426,89 +486,7 @@ footer {
 }
 
 /* =========================================
-   9. RESPONSIVE DESIGN (DESKTOP)
-   ========================================= */
-@media (min-width: 768px) {
-
-  /* Navigation */
-  .hamburger {
-    display: none;
-  }
-
-  nav.nav-links {
-    display: block !important;
-    width: auto;
-    margin-top: 0;
-    background-color: transparent;
-  }
-
-  nav ul {
-    flex-direction: row;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  nav a {
-    color: #2c3e50;
-    padding: 10px 15px;
-  }
-
-  /* Navigations-Icons Desktop */
-  .nav-icons {
-    flex-direction: row;
-    gap: 5px;
-    border-top: none;
-    margin-left: 20px;
-  }
-
-  /* Hero Section */
-  .hero {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 80px 10%;
-    text-align: left;
-  }
-
-  .hero-content {
-    text-align: left;
-    flex: 1;
-  }
-
-  .hero-btns {
-    flex-direction: row;
-  }
-
-  .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  /* Shop Raster & Layout */
-  .shop-layout {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .shop-sidebar {
-    width: 250px;
-    flex-shrink: 0;
-    position: sticky;
-    top: 20px;
-  }
-
-  .shop-content {
-    flex-grow: 1;
-  }
-
-  .article-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-}
-
-/* =========================================
-   10. HERO SLIDESHOW
+   9. HERO SLIDESHOW
    ========================================= */
 /*.slideshow-container {
   position: relative;
@@ -543,74 +521,206 @@ footer {
 }
 
 /* =========================================
-   11. INTERAKTIVES NEWS-BANNER
+   10. INTERAKTIVES NEWS-BANNER
    ========================================= */
 .news-section {
   text-align: center;
-  margin: 60px 0;
+  margin: 40px 0;
 }
 
 .news-banner {
   position: relative;
   display: block;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 15px;
+  /* Abstand zum Bildschirmrand auf Mobile */
   border-radius: 15px;
   overflow: hidden;
   text-decoration: none;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .news-banner img {
   width: 100%;
   display: block;
-  transition: transform 0.5s ease;
 }
 
-/* Der Overlay-Hintergrund, der anfangs unsichtbar ist */
+/* MOBILE FIRST: Das Overlay ist auf dem Handy IMMER sichtbar */
 .news-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* Ein halbtransparentes Blau, passend zu deiner CI */
-  background-color: rgba(235, 126, 58, 0.85);
+  background-color: rgba(235, 126, 58, 0.9);
+  /* Leicht deckender für bessere Lesbarkeit */
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  padding: 20px;
+  opacity: 1;
+  /* Aktiviert auf Mobile */
+  padding: 15px;
   box-sizing: border-box;
 }
 
 .news-overlay h3 {
   color: white;
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 1.4rem;
+  /* Kompakte Schriftgröße für Smartphones */
+  margin: 0 0 8px 0;
 }
 
 .news-overlay p {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
-  max-width: 600px;
+  font-size: 0.95rem;
+  /* Kompakte Schriftgröße für Smartphones */
+  margin: 0 0 15px 0;
+  max-width: 100%;
 }
 
-/* HOVER-EFFEKTE */
-/* Beim Drüberfahren zoomt das Bild leicht rein, das Overlay blendet ein und die ganze Karte schwebt hoch */
-.news-banner:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+.news-overlay .btn-primary {
+  padding: 10px 20px;
+  font-size: 0.9rem;
 }
 
-.news-banner:hover img {
-  transform: scale(1.05);
+/* =========================================
+   11. RESPONSIVE DESIGN (DESKTOP)
+   ========================================= */
+@media (min-width: 768px) {
+
+  /* Navigation */
+  .hamburger {
+    display: none;
+  }
+
+  nav.nav-links {
+    display: block !important;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav a {
+    color: #2c3e50;
+    padding: 10px 15px;
+  }
+
+  /* Navigations-Icons Desktop */
+  .nav-icons {
+    flex-direction: row;
+    gap: 5px;
+    border-top: none;
+    margin-left: 20px;
+  }
+  /* Hero */
+  main {
+    padding: 40px;
+  }
+
+  /* Hero Section für Desktop */
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px 8%;
+    gap: 50px;
+    text-align: left;
+  }
+
+  .hero-content {
+    text-align: left;
+    flex: 1.2; /* Gibt dem Text etwas mehr Raum */
+  }
+
+  .hero-content h1 {
+    font-size: 3rem; /* Größere, beeindruckende Schrift auf Desktop */
+  }
+
+  .hero-btns {
+    flex-direction: row;
+    width: auto;
+    display: inline-flex;
+  }
+
+  .hero-image {
+    flex: 1;
+    justify-content: flex-end;
+  }
 }
 
-.news-banner:hover .news-overlay {
-  opacity: 1;
-}
+  /* Shop Raster & Layout */
+  .shop-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .shop-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 20px;
+  }
+
+  .shop-content {
+    flex-grow: 1;
+  }
+
+  .article-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .news-banner {
+    margin: 0 auto;
+    /* Zentrieren auf großen Bildschirmen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .news-banner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .news-banner img {
+    transition: transform 0.5s ease;
+  }
+
+  .news-banner:hover img {
+    transform: scale(1.05);
+  }
+
+  /* DESKTOP-HOVER: Hier verstecken wir das Overlay wieder vor dem Hovern */
+  .news-overlay {
+    opacity: 0;
+    /* Standardmäßig unsichtbar auf Desktop */
+    transition: opacity 0.4s ease;
+    padding: 30px;
+    /* Mehr Platz auf großen Bildschirmen */
+  }
+
+  /* Erst beim Hovern auf dem Desktop einblenden */
+  .news-banner:hover .news-overlay {
+    opacity: 1;
+  }
+
+  .news-overlay h3 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+  }
+
+  .news-overlay p {
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+    max-width: 600px;
+  }
+
+  .news-overlay .btn-primary {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
