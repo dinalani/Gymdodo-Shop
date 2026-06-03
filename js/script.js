@@ -16,20 +16,21 @@ function countDecimals(value) {
 
 // Eigene Funktion formatierung der Preise
 function formatPrice(price) {
-    let priceString = price.toString();
-    const decimals = countDecimals(price);
+    let i = countDecimals(price);
 
-    // Nullen auffüllen je nach Anzahl der Nachkommastellen
-    if (decimals === 0) {
-        priceString += ",00";
-    } else if (decimals === 1) {
-        priceString = priceString.replace(".", ",") + "0";
-    } else {
-        priceString = priceString.replace(".", ",");
+    if (i == 0) {
+        price = price + ",00 EUR";
     }
+    else if (i == 1) {
+        price = price + "0 EUR";
+    }
+    else {
+        price = price + " EUR";
+    }
+    return price.replace(".", ",");
 
-    // Währung anhängen
-    return priceString + " €";
+    // toFixed(2) macht aus 25 -> "25.00" oder aus 7.9 -> "7.90"
+    // return price.toFixed(2).replace(".", ",") + " €";
 }
 
 
