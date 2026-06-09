@@ -54,6 +54,14 @@
             </div>
         </section>
 
+        <div class="action-buttons-container">
+            <button id="deselectButton" class="btn-primary" disabled>Alle Produkte abwählen</button>
+            <button id="compareButton" class="btn-primary" disabled>Produkte vergleichen</button>
+        </div>
+
+        <div class="article-container">
+        </div>
+
         <section>
             <div class="article-container">
                 <template>
@@ -146,12 +154,19 @@
                 <img src="img/card_shop21.png" alt="Dodo Frühlingssale">
 
                 <div class="news-overlay">
-                    <h3>Frühlingssale!</h3>
+                    <h3>Sommersale!</h3>
                     <p>Verpasse nicht unsere einzigartigen Angebote und sichere dir bis zu 40% Rabatt.</p>
                     <span class="btn-primary">Jetzt zum Sale</span>
                 </div>
             </a>
         </section>
+
+        <dialog id="compareDialog">
+            <div id="compareContainer" class="article-container">
+            </div>
+            <button id="closeDialogButton" class="btn-primary">Vergleich schließen</button>
+        </dialog>
+
     </main>
 
     <footer>

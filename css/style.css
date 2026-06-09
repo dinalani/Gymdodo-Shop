@@ -102,9 +102,6 @@ nav a:hover {
 }
 
 /* =========================================
-   3. HAUPTBEREICH & HERO
-   ========================================= */
-/* =========================================
    3. HAUPTBEREICH & HERO (MOBILE FIRST)
    ========================================= */
 main {
@@ -322,7 +319,7 @@ main {
 }
 
 .shop-tag {
-  color:#ff9253;
+  color: #ff9253;
   font-weight: bold;
   font-size: larger;
   text-transform: uppercase;
@@ -470,7 +467,7 @@ button {
 }
 
 button:hover {
-  background-color: #f35b4a;
+  background-color: #ff9253;
 }
 
 /* =========================================
@@ -620,6 +617,7 @@ footer {
     border-top: none;
     margin-left: 20px;
   }
+
   /* Hero */
   main {
     padding: 40px;
@@ -636,11 +634,13 @@ footer {
 
   .hero-content {
     text-align: left;
-    flex: 1.2; /* Gibt dem Text etwas mehr Raum */
+    flex: 1.2;
+    /* Gibt dem Text etwas mehr Raum */
   }
 
   .hero-content h1 {
-    font-size: 3rem; /* Größere, beeindruckende Schrift auf Desktop */
+    font-size: 3rem;
+    /* Größere, beeindruckende Schrift auf Desktop */
   }
 
   .hero-btns {
@@ -655,72 +655,119 @@ footer {
   }
 }
 
-  /* Shop Raster & Layout */
-  .shop-layout {
-    flex-direction: row;
-    align-items: flex-start;
-  }
+/* Shop Raster & Layout */
+.shop-layout {
+  flex-direction: row;
+  align-items: flex-start;
+}
 
-  .shop-sidebar {
-    width: 250px;
-    flex-shrink: 0;
-    position: sticky;
-    top: 20px;
-  }
+.shop-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 20px;
+}
 
-  .shop-content {
-    flex-grow: 1;
-  }
+.shop-content {
+  flex-grow: 1;
+}
 
-  .article-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
+.article-container {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 
-  .news-banner {
-    margin: 0 auto;
-    /* Zentrieren auf großen Bildschirmen */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+.news-banner {
+  margin: 0 auto;
+  /* Zentrieren auf großen Bildschirmen */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .news-banner:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  }
+.news-banner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
 
-  .news-banner img {
-    transition: transform 0.5s ease;
-  }
+.news-banner img {
+  transition: transform 0.5s ease;
+}
 
-  .news-banner:hover img {
-    transform: scale(1.05);
-  }
+.news-banner:hover img {
+  transform: scale(1.05);
+}
 
-  /* DESKTOP-HOVER: Hier verstecken wir das Overlay wieder vor dem Hovern */
-  .news-overlay {
-    opacity: 0;
-    /* Standardmäßig unsichtbar auf Desktop */
-    transition: opacity 0.4s ease;
-    padding: 30px;
-    /* Mehr Platz auf großen Bildschirmen */
-  }
+/* DESKTOP-HOVER: Hier verstecken wir das Overlay wieder vor dem Hovern */
+.news-overlay {
+  opacity: 0;
+  /* Standardmäßig unsichtbar auf Desktop */
+  transition: opacity 0.4s ease;
+  padding: 30px;
+  /* Mehr Platz auf großen Bildschirmen */
+}
 
-  /* Erst beim Hovern auf dem Desktop einblenden */
-  .news-banner:hover .news-overlay {
-    opacity: 1;
-  }
+/* Erst beim Hovern auf dem Desktop einblenden */
+.news-banner:hover .news-overlay {
+  opacity: 1;
+}
 
-  .news-overlay h3 {
-    font-size: 2.2rem;
-    margin-bottom: 12px;
-  }
+.news-overlay h3 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
 
-  .news-overlay p {
-    font-size: 1.15rem;
-    margin-bottom: 25px;
-    max-width: 600px;
-  }
+.news-overlay p {
+  font-size: 1.15rem;
+  margin-bottom: 25px;
+  max-width: 600px;
+}
 
-  .news-overlay .btn-primary {
-    padding: 15px 30px;
-    font-size: 1rem;
-  }
+.news-overlay .btn-primary {
+  padding: 15px 30px;
+  font-size: 1rem;
+}
+
+/* =========================================
+   12. PRODUKT-INTERAKTION & DIALOG (NEU)
+   ========================================= */
+
+/* Visuelle Hervorhebung beim Anklicken (Teilaufgabe 1) */
+.shop-card.selected {
+  border: 4px solid #ff9253;
+  /* Dodo-Orange als Akzentfarbe */
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(255, 146, 83, 0.2);
+}
+
+/* Ausgrauen von deaktivierten Buttons (Teilaufgabe 3 & 5) */
+button:disabled {
+  opacity: 0.5;
+  background-color: #ddd;
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* Einfaches Styling für den Dialog (Teilaufgabe 4) */
+#compareDialog {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  max-width: 900px;
+  width: 90%;
+}
+
+#compareDialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#closeDialogButton {
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
+/* Abstand der Aktions-Buttons zu den Produktkarten und zueinander */
+.action-buttons-container {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}

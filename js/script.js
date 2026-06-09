@@ -16,22 +16,22 @@ function countDecimals(value) {
 
 // Eigene Funktion formatierung der Preise
 function formatPrice(price) {
-    let i = countDecimals(price);
-
-    if (i == 0) {
-        price = price + ",00 EUR";
-    }
-    else if (i == 1) {
-        price = price + "0 EUR";
-    }
-    else {
-        price = price + " EUR";
-    }
-    return price.replace(".", ",");
-
     // toFixed(2) macht aus 25 -> "25.00" oder aus 7.9 -> "7.90"
-    // return price.toFixed(2).replace(".", ",") + " €";
+    return price.toFixed(2).replace(".", ",") + " €";
 }
+// let i = countDecimals(price);
+
+// if (i == 0) {
+// price = price + ",00 EUR";
+// }
+// else if (i == 1) {
+// price = price + "0 EUR";
+// }
+// else {
+// price = price + " EUR";
+// }
+// return price.replace(".", ",");
+// }
 
 
 // Aufgabe 1: Produkt Array
@@ -143,6 +143,147 @@ function showProducts(userAge) {
 
         div.appendChild(productNode);
     }
+}
+
+// DOM-Elemente für Buttons und Dialog selektieren
+const deselectButton = document.querySelector("#deselectButton");
+const compareButton = document.querySelector("#compareButton");
+const compareDialog = document.querySelector("#compareDialog");
+const compareContainer = document.querySelector("#compareContainer");
+const closeDialogButton = document.querySelector("#closeDialogButton");
+
+// Aktualisiert disabled Status der Buttons basierend auf der Auswahl
+function updateButtons() {
+    // Ermitteln wie viele Cards aktuell angeklickt sind
+    const selectedCards = document.querySelectorAll(".shop-card.selected");
+    const count = selectedCards.length;
+
+    // aufgabe 3: Button nur anklickbar wenn mind 1 Produkt gewählt 
+    deselectButton.disabled = count === 0;
+
+    // aufgabe 5: Button nur anklickbar, wenn genau 2 Produkte gewählt sind
+    compareButton.disabled = count !== 2;
+}
+
+// Öffnet den Dialog und fügt die Kopien ein (aufgabe 5)
+function openCompareDialog() {
+    const selectedCards = document.querySelectorAll(".shop-card.selected");
+
+    if (selectedCards.length === 2) {
+        // Zuerst den Container leeren, falls vorher schon mal verglichen wurde
+        compareContainer.innerHTML = "";
+
+        // Kopien (cloneNode) der ausgewählten Karten hinzufügen
+        selectedCards.forEach(card => {
+            compareContainer.appendChild(card.cloneNode(true));
+        });
+
+        // Dialog öffnen
+        compareDialog.showModal();
+    }
+}
+
+// EVENT-LISTENER
+
+// aufgabe 3: Button "Auswahl aufheben" klickbar machen
+deselectButton.addEventListener("click", function () {
+    const selectedCards = document.querySelectorAll(".shop-card.selected");
+    selectedCards.forEach(card => {
+        card.classList.remove("selected"); // Hervorhebung entfernen
+    });
+    updateButtons(); // ButtonZustände aktualisieren
+});
+
+//aufgabe 5: Button "Produkte vergleichen" klickbar machen
+compareButton.addEventListener("click", openCompareDialog);
+
+// aufgabe 6: Dialog schließen
+closeDialogButton.addEventListener("click", function () {
+    compareDialog.close();
+
+    // Alle ausgewählten Produkte nicht mehr hervorheben
+    const selectedCards = document.querySelectorAll(".shop-card.selected");
+    selectedCards.forEach(card => {
+        card.classList.remove("selected");
+    });
+    updateButtons();
+});
+
+// aufgabe 7: Tastatursteuerung
+document.addEventListener("keydown", function (event) {
+    // Wenn genau 2 Produkte ausgewählt sind und 'l' gedrückt wird
+    if (event.key === "l") {
+        const selectedCount = document.querySelectorAll(".shop-card.selected").length;
+        if (selectedCount === 2) {
+            openCompareDialog();
+        }
+    }
+});
+
+// HAUPTFUNKTION
+
+function showProducts(userAge) {
+    const div = document.querySelector(".article-container");
+
+    if (!checkAge(userAge)) {
+        div.innerHTML = "";
+        const message = document.createElement("p");
+        message.textContent = "Du bist leider zu jung für diese Produkte.";
+        message.style.color = "red";
+        message.style.fontSize = "1.2rem";
+        message.style.fontWeight = "bold";
+        div.appendChild(message);
+        return;
+    }
+
+    const productTemplate = document.querySelector("template");
+
+    for (const product of products) {
+        if (!product.isAvailable) {
+            continue;
+        }
+
+        const productNode = productTemplate.content.cloneNode(true);
+        const shopCard = productNode.querySelector(".shop-card");
+
+        productNode.querySelector(".shop-media img").src = product.imgSrc;
+        productNode.querySelector(".shop-media img").alt = product.imgAlt;
+        productNode.querySelector("h3").innerHTML = product.title;
+        productNode.querySelector(".shop-meta").textContent = product.desc;
+        productNode.querySelector(".shop-tag").textContent = formatPrice(product.price);
+
+        const labelsContainer = productNode.querySelector(".shop-labels");
+        product.tags.forEach(tagText => {
+            const span = document.createElement("span");
+            span.textContent = tagText;
+            labelsContainer.appendChild(span);
+        });
+
+        // B8 aufgabe 1 & 2: Produkte auswählbar machen und auf 2 begrenzen
+        shopCard.addEventListener("click", function () {
+            // Methode contains prüft ob das Element eine Klasse hat
+            const isSelected = shopCard.classList.contains("selected");
+            const selectedCount = document.querySelectorAll(".shop-card.selected").length;
+
+            if (isSelected) {
+                // Erneuter Klick -> CSS Klasse wieder entfernen
+                shopCard.classList.remove("selected");
+            } else {
+                // Nur hinzufügen wenn bisher weniger als 2 ausgewählt sind
+                if (selectedCount < 2) {
+                    shopCard.classList.add("selected"); // Setzen der CSS-Klasse
+                }
+            }
+
+            // Wichtig!!!!! Nach jedem Klick die Buttons validieren mööööhhh
+            updateButtons();
+        });
+
+        div.appendChild(productNode);
+    }
+
+    // Button Zustände setzen (Beim laden der Seite ist noch nichts ausgewählt)
+    updateButtons();
 }
 
 // Funktionsaufruf
