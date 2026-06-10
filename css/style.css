@@ -726,7 +726,7 @@ footer {
 }
 
 /* =========================================
-   12. PRODUKT-INTERAKTION & DIALOG (NEU)
+   12. PRODUKT-INTERAKTION & DIALOG
    ========================================= */
 
 /* Visuelle Hervorhebung beim Anklicken (Teilaufgabe 1) */
@@ -738,14 +738,14 @@ footer {
 }
 
 /* Ausgrauen von deaktivierten Buttons (Teilaufgabe 3 & 5) */
-button:disabled {
+.action-buttons-container button:disabled {
   opacity: 0.5;
   background-color: #ddd;
   color: #888;
   cursor: not-allowed;
 }
 
-/* Einfaches Styling für den Dialog (Teilaufgabe 4) */
+/* Einfaches Styling für den Dialog (aufgabe 4) */
 #compareDialog {
   border: none;
   border-radius: 15px;
