@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gymdodo - Gutschein Aktion</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/gutschein.js" defer></script>
+    <style>
+        /* Spezifische Layout-Anpassungen für die Gutscheinbox */
+        .coupon-box {
+            max-width: 500px;
+            margin: 60px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .coupon-box h2 {
+            color: var(--color-blue);
+            margin-bottom: 20px;
+        }
+        .coupon-code {
+            display: inline-block;
+            font-size: 2.2rem;
+            font-weight: bold;
+            letter-spacing: 4px;
+            color: #ff9253; /* Dodo Orange */
+            background: #fff3eb;
+            border: 2px dashed #ff9253;
+            padding: 15px 30px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .error-message {
+            color: #c62828;
+            background: #ffebee;
+            border: 1px solid #c62828;
+            padding: 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .btn-container {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header-logo">
+            <img src="img/logo.png" alt="Dodo Logo">
+            <div class="header-text">
+                <h1>Gymdodo</h1>
+            </div>
+        </a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="coupon-box">
+            <h2>Exklusive Geschenk-Aktion 🎁</h2>
+            
+            <div id="coupon-result">
+                <p>Gutscheincode wird generiert...</p>
+            </div>
+
+            <div class="btn-container">
+                <a href="index.html" class="btn-primary">Zurück zur Startseite</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <p>&copy; 2026 Gymdodo<br>Alle Rechte vorbehalten.</p>
+        </section>
+    </footer>
+</body>
+</html>
