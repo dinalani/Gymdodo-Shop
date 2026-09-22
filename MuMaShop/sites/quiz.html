@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gymdodo - Quiz & Preisausschreiben</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+    <script src="../js/quiz.js" defer></script>
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main style="padding: 40px 20px; max-width: 800px; margin: 0 auto;">
+        <h2 style="color: var(--color-blue); text-align: center;">Gymdodo Dodo-Quiz</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Beantworte alle 5 Fragen richtig und nimm an unserem
+            exklusiven Preisausschreiben teil!</p>
+
+        <!-- Quiz Container -->
+        <form id="quizForm"
+            style="background: #fff; padding: 30px; border-radius: 12px; border: 1px solid #eaeaea; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <div id="questions-container">
+                <p>Quiz wird geladen...</p>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%; margin-top: 20px;">Antworten prüfen</button>
+            <p id="quiz-error" style="color: red; text-align: center; margin-top: 15px; display: none;">Leider nicht
+                ganz richtig. Versuch es nochmal!</p>
+        </form>
+
+        <!-- Teilnahme Formular -->
+        <form id="lotteryForm"
+            style="display: none; background: #f1f8ff; padding: 30px; border-radius: 12px; border: 1px solid #d5e8fb; margin-top: 30px;">
+            <h3 style="color: var(--color-blue); text-align: center;">🎉 Richtig! Trag dich in die Lotterie ein.</h3>
+
+            <div style="margin-bottom: 15px;">
+                <label for="teilnehmerName" style="font-weight: bold;">Name*</label>
+                <input type="text" id="teilnehmerName" required
+                    style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label for="teilnehmerEmail" style="font-weight: bold;">E-Mail*</label>
+                <input type="email" id="teilnehmerEmail" required
+                    style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%; background-color: #ff9253;">Am Gewinnspiel
+                teilnehmen</button>
+        </form>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gymdodo - Shop</title>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/shop.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/shop.css">
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <div class="shop-layout">
+            <aside class="shop-sidebar">
+                <h3>Kategorien</h3>
+                <ul class="category-list" id="category-list" style="margin-bottom: 25px;">
+                    <li><a href="#" class="sidebar-category" data-category="">Alle Produkte</a></li>
+                    <li><a href="#" class="sidebar-category" data-category="Proteine">Proteine</a></li>
+                    <li><a href="#" class="sidebar-category" data-category="Snacks & Riegel">Snacks & Riegel</a></li>
+                    <li><a href="#" class="sidebar-category" data-category="Zubehör & Kleidung">Zubehör & Kleidung</a>
+                    </li>
+                    <li><a href="#" class="sidebar-category" data-category="Sale %">Sale %</a></li>
+                </ul>
+
+                <h3>Beliebte Tags</h3>
+                <div id="tag-list" class="tag-list">
+                    <p style="font-size: 0.85rem; color: #777;">Lade Tags...</p>
+                </div>
+            </aside>
+
+            <section class="shop-content">
+                <div class="shop-search-container">
+                    <!-- Formular sendet nicht mehr ab -->
+                    <form id="search-form" class="shop-search-bar" onsubmit="event.preventDefault();">
+                        <input type="text" id="search-input"
+                            placeholder="Nach Produkten, Eigenschaften oder Tags suchen..." class="search-input"
+                            autocomplete="off">
+                        <button type="submit" class="search-btn" aria-label="Suchen">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="produkte-container" class="article-container">
+                    <p>Produkte werden geladen...</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+</body>
+
+</html>

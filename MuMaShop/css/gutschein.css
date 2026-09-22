@@ -1,0 +1,276 @@
+
+.gutschein-hero {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #111a24 0%, #2476ba 100%);
+    padding: 35px 25px 25px 25px;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin-bottom: 0;
+    color: #ffffff;
+}
+
+.gutschein-hero-badge {
+    display: inline-block;
+    background-color: rgba(36, 118, 186, 0.2);
+    color: #52a5ec;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.gutschein-hero h1,
+.gutschein-hero h2 {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 12px;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.gutschein-highlight-text {
+    color: var(--color-orange);
+    text-shadow: 0 0 15px rgba(255, 146, 83, 0.3);
+}
+
+.gutschein-hero p {
+    font-size: 0.95rem;
+    color: #cdffff;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* --- FORMULAR & EINGABEFELDER --- */
+.gutschein-hero form {
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.gutschein-check-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.gutschein-check-group .code-input,
+.gutschein-check-group button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0;
+}
+
+.gutschein-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.gutschein-hero-image {
+    width: 100%;
+    max-width: 250px;
+    margin: 30px auto 0 auto;
+}
+
+.gutschein-hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* --- DESKTOP ANSICHT FÜR GUTSCHEINE --- */
+@media (min-width: 768px) {
+    .gutschein-hero {
+        flex-direction: row;
+        text-align: left;
+        padding: 50px 8%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 40px;
+    }
+
+    .gutschein-hero>div:first-child {
+        flex: 1.2;
+        max-width: 600px;
+    }
+
+    .gutschein-hero h1,
+    .gutschein-hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .gutschein-hero form {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .gutschein-check-group {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .gutschein-check-group .code-input {
+        width: 220px;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .gutschein-check-group button {
+        width: auto;
+        padding: 13px 25px;
+    }
+
+    .gutschein-btns {
+        flex-direction: row;
+        display: inline-flex;
+        width: auto;
+    }
+
+    .gutschein-hero-image {
+        flex: 1;
+        max-width: 350px;
+        margin-top: 0;
+    }
+}
+
+/* --- GUTSCHEIN ERGEBNISSE & CODE INPUT --- */
+.coupon-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px dashed #acacac;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#gutschein-ergebnis {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: normal;
+    margin: 15px 0;
+}
+
+/* DEINE FARBEN FÜR DAS JAVASCRIPT */
+.error-msg {
+    color: #ff4c4c;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 1.1em !important;
+}
+
+.success-msg {
+    color: #4cff4c;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.code-input {
+    padding: 13px 15px;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+.code-input:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
+}
+
+.check-banner {
+    background-color: #f4f4f5;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.check-banner h3 {
+    margin: 0 0 5px 0;
+    color: #222;
+}
+
+.check-banner p {
+    margin: 0;
+    color: #555;
+}
+
+.gutschein-einloesen-button {
+    background-color: #1f2937;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s;
+    font-size: 0.95rem;
+}
+
+.gutschein-einloesen-button:hover {
+    background-color: #374151;
+    cursor: pointer;
+}
+
+.check-banner-voting {
+    background-color: #f4f4f5;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.check-banner-voting h3 {
+    color: #ff8c00;
+    margin: 0 0 5px 0;
+}
+
+@media (max-width: 767px) {
+    .check-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+    }
+
+    .gutschein-einloesen-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gymdodo - Gutschein Check</title>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/gutschein.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/gutschein.css">
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <section class="gutschein-hero">
+            <div>
+                <span class="gutschein-hero-badge">Gutschein-Check</span>
+                <h2>Ist dein Code noch <span class="gutschein-highlight-text">gültig?</span></h2>
+                <p>Gib hier deinen sechsstelligen Gymdodo-Gutscheincode ein, um sofort zu prüfen, ob du ihn für deinen
+                    nächsten Einkauf nutzen kannst.</p>
+
+                <form id="checkForm" onsubmit="event.preventDefault(); pruefeGutschein();">
+                    <div class="gutschein-check-group">
+                        <input type="text" id="code-input" class="code-input" placeholder="z.B. 123456" maxlength="6"
+                            required spellcheck="false">
+                        <button type="submit" id="btn-check" class="btn-primary">Code prüfen</button>
+                    </div>
+                </form>
+
+                <div id="check-container"
+                    style="display: none; margin-top: 25px; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 10px;">
+                    <div id="check-ergebnis" style="font-weight: bold;"></div>
+                </div>
+            </div>
+
+            <div class="gutschein-hero-image">
+                <img src="../img/all/tresor.jpg" alt="Gymdodo Urzeit-Münze Artefakt">
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+</body>
+
+</html>

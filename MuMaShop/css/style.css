@@ -1,0 +1,167 @@
+/* Globale Komponenten automatisch laden */
+@import url("header.css");
+@import url("footer.css");
+
+
+:root {
+  --color-blue: #2476ba;
+  --color-orange: #ff9253;
+  --color-dark: #2c3e50;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #f0f2f5;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  padding: 20px 15px;
+}
+
+/* GLOBALE BUTTONS */
+.btn-primary,
+.btn-secondary {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-orange);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 146, 83, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: #e07b42;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 146, 83, 0.6);
+}
+
+.btn-secondary {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+}
+
+/* GLOBALE FORMULARE */
+form {
+  background-color: #f9f9f9;
+  padding: 25px 20px;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input[type="date"],
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.Ziel-text {
+  font-weight: bold;
+  padding-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.form-check-muskel,
+.form-check-abnehmen,
+.form-check-ausdauer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 0;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+  margin: 0;
+}
+
+button {
+  background-color: var(--color-dark);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+button:hover {
+  background-color: var(--color-orange);
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  main {
+    padding: 40px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: auto;
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+
+  button {
+    width: auto;
+  }
+}

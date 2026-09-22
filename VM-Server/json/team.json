@@ -1,0 +1,40 @@
+[
+    {
+        "id": 1,
+        "name": "Ardina Asllani",
+        "role": "Frontend Architect & Creative Lead",
+        "description": "Ardina sorgt dafür, dass Gymdodo auf allen Geräten gestochen scharf aussieht. Mit viel Liebe zum Detail designt sie Benutzeroberflächen, die selbst Neandertaler intuitiv bedienen können.",
+        "tasks": [
+            "UI/UX-Konzeption & responsive Umsetzung",
+            "Visuelles Design & Markenidentität",
+            "Frontend-Performance & Barrierefreiheit"
+        ],
+        "hobbies": [
+            "Mammut-Kreuzheben",
+            "Steinzeit-Backen",
+            "UX-Prototyping"
+        ],
+        "quote": "„Ein starkes Design ist wie ein Säbelzahntiger – elegant und voller Power.“",
+        "image": "img/team/ardina.jpeg",
+        "imageAlt": "Porträt von Ardina, Frontend Architect"
+    },
+    {
+        "id": 2,
+        "name": "Max Mustermann",
+        "role": "Head of Product & Nutrition Coach",
+        "tasks": [
+            "Rezepturen & Produktentwicklung",
+            "Qualitätsprüfung der Urzeit-Supplements",
+            "Community-Betreuung & Feedback-Auswertung"
+        ],
+        "description": "Mustermann bringt Fitness-Expertise und Produktvision zusammen. Er wählt die Zutaten für unsere Supplement-Reihe aus und sorgt dafür, dass Geschmack und Nährwerte unschlagbar sind.",
+        "hobbies": [
+            "Säbelzahn-Sprint",
+            "Bouldern",
+            "Ernährungsberatung"
+        ],
+        "quote": "„Echte Evolution beginnt mit dem richtigen Treibstoff im Training.“",
+        "image": "img/team/max.jpeg",
+        "imageAlt": "Porträt von Max, Head of Product"
+    }
+]

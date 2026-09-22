@@ -1,0 +1,120 @@
+[
+  {
+    "abholnummer": 1,
+    "anrede": "Frau",
+    "name": "Ardina",
+    "email": "dinalani63@gmail.com",
+    "produkte": [
+      {
+        "id": 1,
+        "name": "Power Protein",
+        "price": 21.99,
+        "oldPrice": 24.99,
+        "description": "Cremiger Genuss mit echtem Vanillegeschmack.",
+        "image": "img/produkte/Produkt1.png",
+        "imageAlt": "ein Bild von Vanilla Power Protein",
+        "labels": [
+          "Muskelaufbau",
+          "Post-Workout"
+        ],
+        "category": [
+          "Proteine",
+          "Sale %"
+        ],
+        "availableUnits": 13,
+        "available": true
+      },
+      {
+        "id": 3,
+        "name": "Isoclear",
+        "price": 27.49,
+        "description": "Die fruchtige Alternative zum klassischen Milchshake.",
+        "image": "img/produkte/Produkt3.png",
+        "imageAlt": "ein Bild von Isoclear Protein",
+        "labels": [
+          "Muskelaufbau",
+          "Erfrischend"
+        ],
+        "category": [
+          "Proteine"
+        ],
+        "availableUnits": 9,
+        "available": true
+      },
+      {
+        "id": 6,
+        "name": "Gymdodo Geschmackspulver",
+        "price": 16.49,
+        "description": "Langweiliger Magerquark war gestern.",
+        "image": "img/produkte/Produkt6.png",
+        "imageAlt": "Ein Bild vom Gymdodo Geschmackspulver",
+        "labels": [
+          "Diät",
+          "Kalorienarm"
+        ],
+        "category": [
+          "Proteine",
+          "Snacks & Riegel"
+        ],
+        "availableUnits": 25,
+        "available": true
+      }
+    ],
+    "gesamtsumme": 59.97,
+    "bestelltAm": "2026-09-16T17:21:51.006Z"
+  },
+  {
+    "abholnummer": 2,
+    "anrede": "Frau",
+    "name": "Ardina",
+    "email": "dinalani63@gmail.com",
+    "produkte": [
+      {
+        "id": 3,
+        "name": "Isoclear",
+        "price": 27.49,
+        "description": "Die fruchtige Alternative zum klassischen Milchshake.",
+        "image": "img/produkte/Produkt3.png",
+        "imageAlt": "ein Bild von Isoclear Protein",
+        "labels": [
+          "Muskelaufbau",
+          "Erfrischend"
+        ],
+        "category": [
+          "Proteine"
+        ],
+        "availableUnits": 8,
+        "available": true
+      }
+    ],
+    "gesamtsumme": 24.99,
+    "bestelltAm": "2026-09-16T17:22:00.651Z"
+  },
+  {
+    "abholnummer": 3,
+    "anrede": "Herr",
+    "name": "Faruk",
+    "email": "jshasia@gmail.de",
+    "produkte": [
+      {
+        "id": 11,
+        "name": "Gymdodo Lifting Schuhe",
+        "price": 98.99,
+        "description": "Maximale Stabilität für deine PRs.",
+        "image": "img/produkte/schuhe.jpeg",
+        "imageAlt": "Ein Bild von den Gymdodo Lifting Schuhen",
+        "labels": [
+          "Powerlifting",
+          "Equipment"
+        ],
+        "category": [
+          "Zubehör & Kleidung"
+        ],
+        "availableUnits": 1,
+        "available": true
+      }
+    ],
+    "gesamtsumme": 89.99,
+    "bestelltAm": "2026-09-16T17:29:50.308Z"
+  }
+]

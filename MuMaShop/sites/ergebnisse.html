@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<!-- Aufgabe 13 -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gymdodo - Ergebnisse</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/voting.css">
+    <script src="../js/script.js" defer></script>
+    <script src="../js/fetchVoting.js" defer></script>
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <section class="voting-container">
+            <div class="voting-header">
+                <h2>Abstimmungsergebnis</h2>
+                <p>Hier siehst du live, welches Artefakt unsere Community als Nächstes ausgraben möchte.</p>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>Produkt</th>
+                            <th>Stimmen</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsTableBody">
+                        <!-- Wird durch fetchVoting.js gefüllt -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Uhrzeit des Pollings -->
+            <p style="text-align: center; margin-top: 15px; color: #555;">
+                Letzter Abruf vom Server: <span id="lastFetchTime"
+                    style="font-weight: bold; color: #2476ba;">lädt...</span>
+            </p>
+
+            <div class="voting-footer">
+                <div class="footer-actions">
+                    <a href="abstimmung.html" class="btn-secondary">Zurück zur Abstimmung</a>
+                    <button id="resetVotesBtn" class="btn-danger">Ergebnisse zurücksetzen</button>
+                </div>
+                <p id="resetFeedback" class="feedback-msg" style="margin-top: 15px;"></p>
+            </div>
+        </section>
+    </main>
+    <footer id="footer-placeholder"></footer>
+</body>
+
+</html>

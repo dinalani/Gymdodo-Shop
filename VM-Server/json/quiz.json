@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "question": "Auf welcher Insel lebte der Dodo endemisch?",
+        "options": [
+            "Madagaskar",
+            "Mauritius",
+            "Galapagos",
+            "Hawaii"
+        ],
+        "answer": "Mauritius"
+    },
+    {
+        "id": 2,
+        "question": "Zu welcher bekannten Vogelfamilie gehörte der Dodo?",
+        "options": [
+            "Papageien",
+            "Tauben",
+            "Hühnervögel",
+            "Falken"
+        ],
+        "answer": "Tauben"
+    },
+    {
+        "id": 3,
+        "question": "Warum verlor der Dodo im Laufe der Evolution seine Flugfähigkeit?",
+        "options": [
+            "Er war zu dick",
+            "Zu viel Wind auf der Insel",
+            "Keine natürlichen Feinde",
+            "Die Schwerkraft war dort höher"
+        ],
+        "answer": "Keine natürlichen Feinde"
+    },
+    {
+        "id": 4,
+        "question": "In welchem Jahrhundert ist der Dodo schätzungsweise ausgestorben?",
+        "options": [
+            "15. Jahrhundert",
+            "17. Jahrhundert",
+            "19. Jahrhundert",
+            "Vor 2000 Jahren"
+        ],
+        "answer": "17. Jahrhundert"
+    },
+    {
+        "id": 5,
+        "question": "Was stand hauptsächlich auf dem Speiseplan des Dodos?",
+        "options": [
+            "Früchte und Samen",
+            "Fische",
+            "Insekten",
+            "Kleine Säugetiere"
+        ],
+        "answer": "Früchte und Samen"
+    }
+]

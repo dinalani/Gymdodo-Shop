@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gymdodo - Details abfragen</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/voting.css">
+    <script src="../js/script.js" defer></script>
+    <script src="../js/voting.js" defer></script>
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <section class="voting-container">
+            <div class="voting-header">
+                <h2>Abstimmungs-Ergebnisse eines Produkts abrufen:</h2>
+                <p>Wähle ein Artefakt aus, um den ganz genauen Grabungsstatus abzufragen.</p>
+            </div>
+
+            <!-- Blockiert das Neuladen der Seite und startet die Abfrage -->
+            <form id="detailsForm" class="voting-form" onsubmit="event.preventDefault(); frageErgebnisAb();">
+
+                <div id="dynamicDetailsOptions">
+                    <p style="text-align: center;">Lade prähistorische Optionen...</p>
+                </div>
+
+                <button type="submit" class="btn-primary voting-btn">Ergebnis laden</button>
+            </form>
+
+            <!-- Ergebnis -->
+            <p id="singleResultDisplay" class="feedback-msg"
+                style="color: #333; font-weight: bold; min-height: 25px; margin-top: 15px;"></p>
+
+            <div class="voting-footer">
+                <a href="abstimmung.html" class="btn-secondary">Zurück zur Abstimmung</a>
+                <a href="ergebnisse.html" class="btn-secondary">Aktuelle Ergebnisse ansehen</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+</body>
+
+</html>

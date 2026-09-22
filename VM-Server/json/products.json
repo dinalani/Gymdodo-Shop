@@ -1,0 +1,196 @@
+[
+    {
+        "id": 1,
+        "name": "Power Protein",
+        "price": 19.99,
+        "oldPrice": 24.99,
+        "description": "Cremiger Genuss mit echtem Vanillegeschmack.",
+        "image": "img/produkte/Produkt1.png",
+        "imageAlt": "ein Bild von Vanilla Power Protein",
+        "labels": [
+            "Muskelaufbau",
+            "Post-Workout"
+        ],
+        "category": [
+            "Proteine",
+            "Sale %"
+        ],
+        "availableUnits": 12,
+        "available": true
+    },
+    {
+        "id": 2,
+        "name": "Zero Sauce",
+        "price": 7.99,
+        "description": "Veredle deine Lieblingsdesserts!",
+        "image": "img/produkte/Produkt2.png",
+        "imageAlt": "ein Bild von Zero Schoko und Erdbeersoße",
+        "labels": [
+            "Diät",
+            "Kalorienarm"
+        ],
+        "category": [
+            "Snacks & Riegel"
+        ],
+        "availableUnits": 0,
+        "available": true
+    },
+    {
+        "id": 3,
+        "name": "Isoclear",
+        "price": 24.99,
+        "description": "Die fruchtige Alternative zum klassischen Milchshake.",
+        "image": "img/produkte/Produkt3.png",
+        "imageAlt": "ein Bild von Isoclear Protein",
+        "labels": [
+            "Muskelaufbau",
+            "Erfrischend"
+        ],
+        "category": [
+            "Proteine"
+        ],
+        "availableUnits": 7,
+        "available": true
+    },
+    {
+        "id": 4,
+        "name": "Dodo Proteinriegel",
+        "price": 4.99,
+        "description": "Der Dodo Proteinriegel ist dein treuer Begleiter.",
+        "image": "img/produkte/Produkt4.png",
+        "imageAlt": "ein Bild von Dodo Proteinriegel",
+        "labels": [
+            "Unterwegs",
+            "Muskelaufbau"
+        ],
+        "category": [
+            "Snacks & Riegel",
+            "Proteine"
+        ],
+        "availableUnits": 49,
+        "available": true
+    },
+    {
+        "id": 5,
+        "name": "Gymdodo Energy (NEU)",
+        "price": 1.99,
+        "description": "Mach Schluss mit der Müdigkeit!",
+        "image": "img/produkte/Produkt5.png",
+        "imageAlt": "Ein Bild vom Gymdodo Energy",
+        "labels": [
+            "Pre-Workout",
+            "Fokus"
+        ],
+        "category": [
+            "Snacks & Riegel"
+        ],
+        "availableUnits": 120,
+        "available": true
+    },
+    {
+        "id": 6,
+        "name": "Gymdodo Geschmackspulver",
+        "price": 14.99,
+        "description": "Langweiliger Magerquark war gestern.",
+        "image": "img/produkte/Produkt6.png",
+        "imageAlt": "Ein Bild vom Gymdodo Geschmackspulver",
+        "labels": [
+            "Diät",
+            "Kalorienarm"
+        ],
+        "category": [
+            "Proteine",
+            "Snacks & Riegel"
+        ],
+        "availableUnits": 24,
+        "available": true
+    },
+    {
+        "id": 7,
+        "name": "Gymdodo Shaker (SALE)",
+        "price": 5.99,
+        "oldPrice": 9.99,
+        "description": "Auslaufsicherer Premium-Shaker mit 700ml.",
+        "image": "img/produkte/Produkt7.png",
+        "imageAlt": "Ein Bild vom Gymdodo Shaker",
+        "labels": [
+            "Equipment",
+            "Sale"
+        ],
+        "category": [
+            "Zubehör & Kleidung",
+            "Sale %"
+        ],
+        "availableUnits": 5,
+        "available": true
+    },
+    {
+        "id": 8,
+        "name": "Gymdodo T-Shirt (SALE)",
+        "price": 19.99,
+        "oldPrice": 29.99,
+        "description": "Das offizielle Gymdodo T-Shirt.",
+        "image": "img/produkte/tshirt.jpeg",
+        "imageAlt": "Ein Bild vom Gymdodo T-Shirt",
+        "labels": [
+            "Oversized",
+            "Sale"
+        ],
+        "category": [
+            "Zubehör & Kleidung",
+            "Sale %"
+        ],
+        "availableUnits": 19,
+        "available": true
+    },
+    {
+        "id": 9,
+        "name": "Gymdodo Hoodie",
+        "price": 49.99,
+        "description": "Dein neues Lieblings-Pump-Cover.",
+        "image": "img/produkte/hoodie.jpeg",
+        "imageAlt": "Ein Bild vom Gymdodo Hoodie",
+        "labels": [
+            "Pump-Cover",
+            "Oversized"
+        ],
+        "category": [
+            "Zubehör & Kleidung"
+        ],
+        "availableUnits": 7,
+        "available": true
+    },
+    {
+        "id": 10,
+        "name": "Gymdodo Jogginghose",
+        "price": 39.99,
+        "description": "Egal ob fürs harte Bein-Training oder entspannte Rest-Days.",
+        "image": "img/produkte/hose.jpeg",
+        "imageAlt": "Ein Bild von der Gymdodo Jogginghose",
+        "labels": [
+            "Rest-Day"
+        ],
+        "category": [
+            "Zubehör & Kleidung"
+        ],
+        "availableUnits": 11,
+        "available": true
+    },
+    {
+        "id": 11,
+        "name": "Gymdodo Lifting Schuhe",
+        "price": 89.99,
+        "description": "Maximale Stabilität für deine PRs.",
+        "image": "img/produkte/schuhe.jpeg",
+        "imageAlt": "Ein Bild von den Gymdodo Lifting Schuhen",
+        "labels": [
+            "Powerlifting",
+            "Equipment"
+        ],
+        "category": [
+            "Zubehör & Kleidung"
+        ],
+        "availableUnits": 5,
+        "available": true
+    }
+]

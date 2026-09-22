@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<!-- Aufgabe 13 -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gymdodo - Produkt-Abstimmung</title>
+    <!-- Zuerst die globale Basis, dann das spezifische Voting-CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/voting.css">
+
+    <script src="../js/script.js" defer></script>
+    <script src="../js/voting.js" defer></script>
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <section class="voting-container">
+            <div class="voting-header">
+                <h2>Die Evolution braucht DICH!</h2>
+                <p>Welches prähistorische Supplement sollen wir als Nächstes aus dem Eis befreien? Bestimme die Zukunft
+                    von Gymdodo!</p>
+            </div>
+
+            <form id="votingForm" class="voting-form">
+
+                <div id="dynamicVotingOptions">
+                    <p style="text-align: center;">Lade prähistorische Optionen...</p>
+                </div>
+
+                <button type="submit" class="btn-primary voting-btn">Dodo-Stimme abgeben</button>
+            </form>
+
+            <p id="feedbackMessage" class="feedback-msg"></p>
+
+            <div class="voting-footer">
+                <a href="details.html" class="btn-secondary">Details</a>
+                <a href="ergebnisse.html" class="btn-secondary">Aktuelle Ergebnisse ansehen</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gymdodo - Startseite</title>
+    <script src="../js/homepage.js" defer></script>
+    <script src="../js/script.js" defer></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/shop.css">
+    <link rel="stylesheet" href="../css/gutschein.css">
+    <link rel="stylesheet" href="../css/startseite.css">
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-badge">Die Evolution des Trainings</span>
+                <h1>Gymdodo – Trainier dich zur <span class="highlight-text">Legende!</span></h1>
+                <p>Schluss mit dem Winterschlaf. Wir begleiten deine Evolution zum fittesten Ich – mit geballter
+                    Urzeit-Power und modernstem Training.</p>
+                <div class="hero-btns">
+                    <a href="shop.html" class="btn-primary">Shop entdecken</a>
+                    <a href="form.html" class="btn-secondary">Termin vereinbaren</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../img/all/heroMuenze.png" alt="Gymdodo Urzeit-Münze Artefakt">
+            </div>
+        </section>
+
+        <div class="action-buttons-container">
+            <button id="deselectButton" class="btn-primary" disabled>Alle Produkte abwählen</button>
+            <button id="compareButton" class="btn-primary" disabled>Produkte vergleichen</button>
+        </div>
+
+        <section>
+            <!-- Produkte über JS -->
+            <div id="produkte-container" class="article-container">
+                <p>Produkte werden geladen...</p>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <h2>NEUIGKEITEN</h2>
+            <a href="gutschein.html" class="news-banner">
+                <img src="../img/all/card_shop21.png" alt="Dodo Frühlingssale">
+                <div class="news-overlay">
+                    <h3>Gutscheine!</h3>
+                    <p>Verpasse nicht unsere einzigartigen Angebote und sichere dir deinen Rabatt.</p>
+                    <span class="btn-primary">Jetzt zum Sale</span>
+                </div>
+            </a>
+        </section>
+
+        <section class="check-banner">
+            <div>
+                <h3>Du hast bereits einen Gutschein?</h3>
+                <p>Prüfe die Gültigkeit deines Codes oder löse deinen Rabatt direkt ein.</p>
+            </div>
+            <a href="pruefe_gutscheine.html" class="gutschein-einloesen-button">Gutschein einlösen</a>
+        </section>
+
+        <!-- AUFGABE 13: ABSTIMMUNG -->
+        <section class="check-banner-voting">
+            <div>
+                <h3>Die Evolution liegt in deinen Händen!</h3>
+                <p>Welches prähistorische Supplement sollen wir als Nächstes aus dem Eis befreien? Nimm an unserer
+                    Community-Abstimmung teil.</p>
+            </div>
+            <a href="abstimmung.html" class="btn-primary">Jetzt abstimmen</a>
+        </section>
+
+
+        <!-- QUIZ SEKTION -->
+        <section class="quiz-section">
+            <a href="quiz.html" class="quiz-banner">
+                <img src="../img/all/quiz.jpeg" alt="Gymdodo Gewinnspiel und Quiz">
+                <div class="quiz-overlay">
+                    <h3>Das Rätsel der Höhle</h3>
+                    <p>Beantworte alle Fragen des alten Wissens richtig und sichere dir deinen Platz im exklusiven
+                        Preisausschreiben!</p>
+                    <span class="btn-primary"
+                        style="background-color: #f39c12; color: #111; border: none; font-weight: bold;">Zum Quiz</span>
+                </div>
+            </a>
+        </section>
+
+        <dialog id="compareDialog">
+            <div id="compareContainer" class="article-container">
+            </div>
+            <button id="closeDialogButton" class="btn-primary">Vergleich schließen</button>
+        </dialog>
+
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+</body>
+
+</html>

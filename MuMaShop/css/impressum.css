@@ -1,0 +1,50 @@
+.impressum-main {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+}
+
+.impressum-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.impressum-container h2 {
+    color: #1b4332;
+    /* Edles Dschungelgrün passend zum Design */
+    margin-top: 0;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 15px;
+}
+
+.impressum-section {
+    margin-bottom: 25px;
+}
+
+.impressum-section h3 {
+    font-size: 1.1rem;
+    color: #2d6a4f;
+    margin-bottom: 8px;
+}
+
+.impressum-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+.impressum-section a {
+    color: #2d6a4f;
+    text-decoration: underline;
+}
+
+.impressum-section a:hover {
+    color: #1b4332;
+}

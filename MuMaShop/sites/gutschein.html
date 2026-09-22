@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gymdodo - Gutscheinaktion</title>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/gutschein.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/gutschein.css">
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <section class="gutschein-hero">
+            <div>
+                <span class="gutschein-hero-badge">Exklusiver Sale</span>
+                <h1>Hol dir deinen <span class="gutschein-highlight-text">Urzeit-Rabatt!</span></h1>
+                <p>Sichere dir jetzt einen von 10 streng limitierten Gutscheincodes für deinen nächsten Einkauf im
+                    Gymdodo Shop. Schnell sein lohnt sich!</p>
+
+                <p id="stats-ausgabe" style="font-weight: bold; margin-bottom: 20px; color: white;">Sichere dir jetzt
+                    Deinen Gutschein!</p>
+
+                <div class="gutschein-btns">
+                    <button id="btn-generate" class="btn-primary" onclick="holeGutschein()">Gutschein jetzt
+                        abrufen</button>
+                    <button id="btn-status" class="btn-secondary" onclick="holeServerStatus()">Server-Status
+                        abrufen</button>
+                </div>
+
+                <div id="coupon-container" class="coupon-box" style="display: none;">
+                    <p id="coupon-label">Dein persönlicher Code:</p>
+                    <div id="gutschein-ergebnis"></div>
+                </div>
+            </div>
+
+            <div class="gutschein-hero-image">
+                <img src="../img/all/gutscheinDodo.jpg" alt="Gymdodo Urzeit-Münze Artefakt">
+            </div>
+        </section>
+
+        <section class="check-banner">
+            <div>
+                <h3>Du hast bereits einen Gutschein?</h3>
+                <p>Prüfe die Gültigkeit deines Codes oder löse deinen Rabatt direkt ein.</p>
+            </div>
+            <a href="pruefe_gutscheine.html" class="gutschein-einloesen-button">Gutschein einlösen</a>
+        </section>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gymdodo - Produkt-Vorbestellung</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/produktliste.css">
+    <script src="../js/script.js" defer></script>
+    <script src="../js/produktliste.js" defer></script>
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main class="order-main">
+        <h2>Produkt-Vorbestellung</h2>
+        <p>Wählen Sie Ihre gewünschten Produkte aus. Die Bezahlung und Abholung erfolgt vor Ort im Ladengeschäft.</p>
+
+        <!-- Bestellformular -->
+        <form id="bestellForm">
+
+            <!-- Produkttabelle -->
+            <table class="order-table" id="produktTabelle">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Produktname</th>
+                        <th>Preis</th>
+                    </tr>
+                </thead>
+                <tbody id="produktTabelleBody">
+                    <!-- Zeilen werden per JS gefüllt -->
+                </tbody>
+            </table>
+
+            <!-- Tabellenzeile -->
+            <template id="produktTemplate">
+                <tr class="produkt-zeile">
+                    <td>
+                        <input type="checkbox" class="produkt-checkbox">
+                    </td>
+                    <td class="produkt-name"></td>
+                    <td class="produkt-preis"></td>
+                </tr>
+            </template>
+
+            <!-- Bestellsumme -->
+            <div class="order-summary">
+                Gesamtsumme: <span id="gesamtsumme">0.00</span> €
+            </div>
+
+            <!-- Eingabefelder für Bestelldaten -->
+            <fieldset class="order-fieldset">
+                <legend>Angaben zum Besteller</legend>
+
+                <div class="order-form-group">
+                    <label for="anrede">Anrede</label>
+                    <select id="anrede" name="anrede" required>
+                        <option value="Herr">Herr</option>
+                        <option value="Frau">Frau</option>
+                        <option value="Divers">Divers</option>
+                    </select>
+                </div>
+
+                <div class="order-form-group">
+                    <label for="bestellerName">Name*</label>
+                    <input type="text" id="bestellerName" name="name" required>
+                </div>
+
+                <div class="order-form-group">
+                    <label for="bestellerEmail">E-Mail*</label>
+                    <input type="email" id="bestellerEmail" name="email" required>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="order-submit-btn">
+                Jetzt reservieren
+            </button>
+
+        </form>
+
+        <!-- Bestätigungs-Box -->
+        <div id="order-confirmation" class="order-confirmation-box">
+            <h3>Vielen Dank für deine Vorbestellung!</h3>
+            <p class="order-confirm-text">Deine Bestellung wurde erfolgreich an uns übermittelt.</p>
+            <p class="order-confirm-details"><strong>Abholnummer:</strong> #<span id="confirm-abholnummer"></span></p>
+            <p class="order-confirm-details confirm-sum-margin"><strong>Gesamtsumme:</strong> <span
+                    id="confirm-summe"></span> €</p>
+            <p class="order-confirm-note">Bitte nenne diese Nummer bei der Abholung im Ladengeschäft.</p>
+
+            <a href="startseite.html" class="btn-primary order-btn-home">Zurück zur Startseite</a>
+        </div>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+</body>
+
+</html>
